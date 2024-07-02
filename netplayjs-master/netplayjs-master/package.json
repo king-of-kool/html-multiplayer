@@ -1,0 +1,14 @@
+{
+    "name": "netplayjs-workspace",
+    "workspaces": [
+        "netplayjs-client",
+        "netplayjs-demo",
+        "netplayjs-common",
+        "netplayjs-server"
+    ],
+    "scripts": {
+        "test": "npm run test --workspaces --if-present",
+        "format": "npm run format --workspaces --if-present",
+        "typecheck": "npm run typecheck --workspaces --if-present"
+    }
+}

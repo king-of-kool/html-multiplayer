@@ -1,0 +1,60 @@
+{
+  "name": "netplayjs",
+  "version": "0.4.1",
+  "main": "dist/netplay.js",
+  "types": "./dist/types/index.d.ts",
+  "description": "A framework for making P2P multiplayer games in Javascript.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rameshvarun/netplayjs.git"
+  },
+  "keywords": [
+    "multiplayer",
+    "webrtc",
+    "typescript",
+    "p2p",
+    "javascript",
+    "rtc"
+  ],
+  "homepage": "https://rameshvarun.github.io/netplayjs/",
+  "dependencies": {
+    "@types/msgpack-lite": "^0.1.8",
+    "@vramesh/netplayjs-common": "^0.0.1",
+    "chai": "^4.3.0",
+    "eventemitter3": "^5.0.0",
+    "lit-html": "^2.7.0",
+    "loglevel": "^1.7.1",
+    "msgpack-lite": "^0.1.26",
+    "qrcode": "^1.5.1",
+    "query-string": "^6.14.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "type-fest": "^0.8.1"
+  },
+  "scripts": {
+    "build": "rm -rf dist/ && npm run typegen && webpack --env production && webpack --env development",
+    "build:watch": "watch 'npm run build' src/",
+    "format": "prettier --write src/**/*.ts src/*.ts",
+    "typecheck": "tsc --noEmit",
+    "check-format": "prettier-check src/**/*.ts",
+    "test": "jest",
+    "typegen": "tsc --declaration --emitDeclarationOnly",
+    "prepublish": "cp ../README.md . && cp -r ../media ."
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "madge": "^4.0.2",
+    "prettier": "^2.2.1",
+    "prettier-check": "^2.0.0",
+    "ts-jest": "^26.5.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.5.5",
+    "watch": "^1.0.2",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-merge": "^5.8.0"
+  }
+}
